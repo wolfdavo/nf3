@@ -24,6 +24,7 @@ overflow: hidden;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
+  padding: 0px 20px;
 }
 
 .mainText {
@@ -42,7 +43,9 @@ overflow: hidden;
 }
 
 .heroInput {
-  max-width: 360px;
+  display: flex;
+  box-sizing: border-box;
+  max-width: 400px;
   width: 100%;
   height: 60px;
   margin: 5px 20px;
@@ -50,7 +53,6 @@ overflow: hidden;
   padding: 0px 20px;
   border-radius: 10px;
   background-color: #000000cc;
-  z-index: 1000;
   color: ${Colors.white};
   font-size: 30px;
   font-family: 'Bebas Neue';
@@ -79,6 +81,11 @@ overflow: hidden;
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .mainText {
+    font-size: 2rem;
+  }
+}
 `;
 
 const subscribeToNewsLetter = (formData, successCallback) => {
